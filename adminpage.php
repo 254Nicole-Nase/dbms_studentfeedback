@@ -19,7 +19,7 @@
 
       if (isset($_SESSION['login_user'])) {
         $userLoggedIn = $_SESSION['login_user'];
-        $result = mysqli_query($con,"SELECT * FROM feedback");
+        $result = mysqli_query($con,"SELECT * FROM feedbacks");
 
         echo "<table border='1' id='students-table'>
                 <tr>

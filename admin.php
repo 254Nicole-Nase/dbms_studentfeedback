@@ -28,6 +28,12 @@
         <div class="submit-form">
           <input type="submit" id="login" name="login" value="Login" />
         </div>
+      <br /><br />
+        <div class="submit-form">
+          <a href="register.php">
+            <input type="button" id="register" name="register" value="Register?" />
+          </a>
+        </div>
       </form>
     </div>
   </body>

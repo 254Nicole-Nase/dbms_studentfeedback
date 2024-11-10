@@ -10,10 +10,14 @@
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
---
--- Table structure for table `feedback`
---
-CREATE TABLE `feedback` (
+-- Select the correct database
+USE feedback;
+
+-- Drop the table if it exists
+DROP TABLE IF EXISTS feedbacks;
+
+-- Create the feedbacks table
+CREATE TABLE `feedbacks` (
   `id`          int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
   `year`        int(4) NOT NULL, 
   `sem`         text NOT NULL, 
@@ -32,16 +36,17 @@ CREATE TABLE `feedback` (
   `remarks`     text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Table structure for table `user`
---
-CREATE TABLE `user` (
-  `id`         int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
-  `email`      text NOT NULL,
-  `password`   text NOT NULL
+-- Drop the table if it exists
+DROP TABLE IF EXISTS users;
+
+-- Create the users table
+CREATE TABLE `users` (
+  `id`         int(255) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  `email`      VARCHAR(255) NOT NULL,
+  `password`   VARCHAR(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `user`
 --
-INSERT INTO `user` (`id`, `email`, `password`) VALUES (1, 'admin@admin.com', 'admin');
+-- INSERT INTO `user` (`id`, `email`, `password`) VALUES (1, 'admin@admin.com', 'admin');
